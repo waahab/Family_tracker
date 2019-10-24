@@ -5,12 +5,7 @@ import Register from './component/Auth/Register';
 import Login from './component/Auth/Login';
 import Home from './component/Home/home';
 import MapPlugin from './component/mapPlugin/mapPlugin';
-import { Text, Image, Platform } from 'react-native';
-
-
-
 class Routers extends Component {
-
     componentWillMount() {
         var config = {
             apiKey: "AIzaSyCpToQ_D1SN_gTX74tG8M5g-L5X7t8EOJ0",
@@ -22,7 +17,6 @@ class Routers extends Component {
         };
         firebase.initializeApp(config);
     }
-
     render() {
         return (
             <Router>
