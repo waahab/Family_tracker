@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Actions } from 'react-native-router-flux';
-import { Container, Header, Content, Form, Item, Input, Label, } from 'native-base';
-import { Text, Alert, Button, Keyboard, View } from 'react-native'
+import { Text, View } from 'react-native'
 import { signinAction } from "../../Action/AuthAction";
 
 class Login extends Component {
@@ -13,12 +11,11 @@ class Login extends Component {
         }
     }
 
-
     render() {
         return (
             <View>
-            <Text>
-            Profile
+                <Text>
+                    Profile
             </Text>
             </View>
         )

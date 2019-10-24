@@ -13,25 +13,24 @@ class Home extends Component {
 
         }
     }
-    getSelectedImages(images) {
+    getSelectedImages = (images) => {
         console.log(images)
     }
-    gallery() {
+    gallery = () => {
         this.setState({ gallery: true })
     }
-    home() {
+    home = () => {
         this.setState({ gallery: false })
     }
 
     render() {
-        // console.log(this.props.user)
         return (
             (this.state.gallery) ? (
                 <View style={styles.container}>
-                    <Button block onPress={this.home.bind(this)} title='Done' style={{marginTop:10}}/>
-                   <CameraRollPicker
+                    <Button block onPress={this.home.bind(this)} title='Done' style={{ marginTop: 10 }} />
+                    <CameraRollPicker
                         callback={this.getSelectedImages.bind(this)} />
-                    
+
                 </View>
             )
                 :
@@ -62,13 +61,13 @@ const styles = StyleSheet.create({
 })
 
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
     return ({
         // user: state.root.user
     })
 
 }
-function mapDispatchToProps(dispatch){
+function mapDispatchToProps(dispatch) {
     return ({
     })
 }
