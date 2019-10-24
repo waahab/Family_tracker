@@ -1,14 +1,7 @@
 import firebase from 'firebase';
 import ActionTypes from './ActionTypes';
 import { Actions } from 'react-native-router-flux';
-
-
-
-
-
-
-
-export function signupAction(user) {
+export const signupAction = (user) => {
     return dispatch => {
         alert(user.email + '  ' + user.username + '  ' + user.password)
 
@@ -24,14 +17,12 @@ export function signupAction(user) {
 }
 
 
-export function signinAction(user) {
-
+export const signinAction = (user) => {
     return dispatch => {
-        firebase.auth().signInWithEmailAndPassword(user.email,user.password).then(
-            (signedInUser)=>{
-                console.log(signedInUser.uid)
-                dispatch({type:ActionTypes.USER, payload:signedInUser})
+        firebase.auth().signInWithEmailAndPassword(user.email, user.password).then(
+            (signedInUser) => {
+                dispatch({ type: ActionTypes.USER, payload: signedInUser })
                 Actions.Home()
-        })
+            })
     }
 }
