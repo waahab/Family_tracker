@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Actions } from 'react-native-router-flux';
-import { Container, Header, Content, Form, Item, Input, Label, } from 'native-base';
-import { Text, Alert, Button, Keyboard } from 'react-native'
+import { } from 'react-native-router-flux';
+import { Container, Content, Item, Input, Label, } from 'native-base';
+import { Button, Keyboard } from 'react-native'
 import { signinAction } from "../../Action/AuthAction";
 
 class Login extends Component {
@@ -16,8 +16,7 @@ class Login extends Component {
         }
     }
 
-    onSubmit() {
-
+    onSubmit = () => {
         let user = {
             email: this.state.email,
             password: this.state.password
@@ -26,11 +25,8 @@ class Login extends Component {
             email: '',
             password: ''
         })
-        // alert(user.email + ' ' + user.password + ' ' + user.username)
         Keyboard.dismiss()
         this.props.signin(user)
-
-        // Actions.Home()
     }
 
     render() {
