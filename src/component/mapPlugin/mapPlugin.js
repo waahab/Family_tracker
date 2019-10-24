@@ -7,16 +7,6 @@ import MapView from 'react-native-maps';
 
 class MapPlugin extends Component {
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         username: '',
-    //         email: '',
-    //         password: ''
-
-    //     }
-    // }
-
     
 
     render() {
